@@ -1,0 +1,27 @@
+<#@ template language="C#v3.5" debug="False" hostspecific="True"  #>
+<#@ output extension=".cs" #>
+<#@ include file="SQLServer.ttinclude" #>
+<#
+    var tables = LoadTables();
+#>
+using System.Runtime.Serialization; 
+
+namespace <#=EnumNamespace#> 
+{
+	public partial class <#=EnumClass#> 
+	{
+<#  foreach(var tbl in EnumTables){
+#>
+		/// <summary>
+		/// Enum generated from table: <#=tbl#>
+		/// </summary>
+		public enum <#=tbl#>
+		{
+<#		var values = LoadEnumValues(tbl);
+		foreach (var key in values.Keys) { 
+#>			<#= System.Text.RegularExpressions.Regex.Replace(key,@"\W","") #> = <#= values[key] #>,
+<# } #>
+		}
+<# } #>
+	}
+}
