@@ -54,6 +54,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="EmailTemplateEnum.cs" />
     <Compile Include="Enums.cs">
       <DependentUpon>Enums.tt</DependentUpon>
       <AutoGen>True</AutoGen>

@@ -132,6 +132,22 @@ namespace DBDataAccess
 			return new SP("GetEventsByOwnerAndTimespanTVP", ps);
 		}
 
+		public static SP GetUserDetailsTVP(int[] userIDs)
+		{
+			var ps = new Parameter[1];
+
+			var dt = new DataTable();
+			dt.Columns.Add("n", typeof(int));
+
+			for (int i = 0; i < userIDs.Length; i++)
+			{
+				dt.Rows.Add(userIDs[i]);
+			}
+			ps[0] = new Parameter("@AppUserIDs", dt, true);
+
+			return new SP("GetUserDetailsTVP", ps);
+		}
+
 		/// <summary>
 		/// Executes our Stored Procedure and gets our return values
 		/// </summary>
@@ -222,15 +238,6 @@ namespace DBDataAccess
 			}
 
 			return new BLResult<DataSet>(ds);
-		}
-
-		public static DataSet getSet()
-		{
-			var db = new MeetballDB();
-			var sp = db.GetLiveBroadcastByID(0);
-			var ds = sp.ExecuteDataSet();
-
-			return ds;
 		}
 
 		/// <summary>

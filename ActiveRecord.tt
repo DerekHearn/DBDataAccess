@@ -37,8 +37,6 @@ namespace <#=Namespace #>
         #region Built-in testing
         static TestRepository<<#=tbl.ClassName#>> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<<#=tbl.ClassName#>>(new <#=Namespace#>.MeetballDB());
         }
@@ -207,6 +205,12 @@ namespace <#=Namespace #>
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<<#=tbl.ClassName#>> Query(Expression<Func<<#=tbl.ClassName#>, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<<#=tbl.ClassName#>> Find(Expression<Func<<#=tbl.ClassName#>, bool>> expression) {
             

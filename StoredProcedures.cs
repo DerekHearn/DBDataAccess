@@ -394,6 +394,12 @@ namespace DBDataAccess{
             sp.Command.AddParameter("Invitee15",Invitee15,DbType.Int32);
             return sp;
         }
+        public StoredProcedure CreateMeetballResponseAllFriends(int MeetballID,int MBOwnerID){
+            StoredProcedure sp=new StoredProcedure("CreateMeetballResponseAllFriends",this.Provider);
+            sp.Command.AddParameter("MeetballID",MeetballID,DbType.Int32);
+            sp.Command.AddParameter("MBOwnerID",MBOwnerID,DbType.Int32);
+            return sp;
+        }
         public StoredProcedure CreateMeetballResponseTVP(int MeetballID,int MBOwnerID,string TVP){
             StoredProcedure sp=new StoredProcedure("CreateMeetballResponseTVP",this.Provider);
             sp.Command.AddParameter("MeetballID",MeetballID,DbType.Int32);
@@ -492,9 +498,10 @@ namespace DBDataAccess{
             sp.Command.AddParameter("EndDate",EndDate,DbType.DateTime);
             return sp;
         }
-        public StoredProcedure GetAllBroadcastsByAppUserID(int AppUserID){
+        public StoredProcedure GetAllBroadcastsByAppUserID(int AppUserID,DateTime EndDateUTC){
             StoredProcedure sp=new StoredProcedure("GetAllBroadcastsByAppUserID",this.Provider);
             sp.Command.AddParameter("AppUserID",AppUserID,DbType.Int32);
+            sp.Command.AddParameter("EndDateUTC",EndDateUTC,DbType.DateTime);
             return sp;
         }
         public StoredProcedure GetAllCommentsByMBID(int MeetballID,int AppUserID){
@@ -576,6 +583,13 @@ namespace DBDataAccess{
             sp.Command.AddParameter("StartMeetballID",StartMeetballID,DbType.Int32);
             return sp;
         }
+        public StoredProcedure GetEventsByDescriptionSubstring(string SearchString,DateTime StartDateUTC,DateTime EndDateUTC){
+            StoredProcedure sp=new StoredProcedure("GetEventsByDescriptionSubstring",this.Provider);
+            sp.Command.AddParameter("SearchString",SearchString,DbType.AnsiString);
+            sp.Command.AddParameter("StartDateUTC",StartDateUTC,DbType.DateTime);
+            sp.Command.AddParameter("EndDateUTC",EndDateUTC,DbType.DateTime);
+            return sp;
+        }
         public StoredProcedure GetEventsByOwnerAndTimespanTVP(string OwnerIDs,DateTime BeginningOfDateRangeUTC,DateTime EndOfDateRangeUTC){
             StoredProcedure sp=new StoredProcedure("GetEventsByOwnerAndTimespanTVP",this.Provider);
             sp.Command.AddParameter("OwnerIDs",OwnerIDs,DbType.AnsiString);
@@ -607,9 +621,10 @@ namespace DBDataAccess{
             sp.Command.AddParameter("TopX",TopX,DbType.Int32);
             return sp;
         }
-        public StoredProcedure GetLiveBroadcastByID(int MeetballID){
+        public StoredProcedure GetLiveBroadcastByID(int MeetballID,int AppUserID){
             StoredProcedure sp=new StoredProcedure("GetLiveBroadcastByID",this.Provider);
             sp.Command.AddParameter("MeetballID",MeetballID,DbType.Int32);
+            sp.Command.AddParameter("AppUserID",AppUserID,DbType.Int32);
             return sp;
         }
         public StoredProcedure GetMBInfoByHash(string MBIDHash){
@@ -705,6 +720,11 @@ namespace DBDataAccess{
             sp.Command.AddParameter("AppUser2ID",AppUser2ID,DbType.Int32);
             return sp;
         }
+        public StoredProcedure GetUserDetailsTVP(string AppUserIDs){
+            StoredProcedure sp=new StoredProcedure("GetUserDetailsTVP",this.Provider);
+            sp.Command.AddParameter("AppUserIDs",AppUserIDs,DbType.AnsiString);
+            return sp;
+        }
         public StoredProcedure GetUserServiceInfo(int AppUserID){
             StoredProcedure sp=new StoredProcedure("GetUserServiceInfo",this.Provider);
             sp.Command.AddParameter("AppUserID",AppUserID,DbType.Int32);
@@ -738,6 +758,13 @@ namespace DBDataAccess{
             sp.Command.AddParameter("MeetballID",MeetballID,DbType.Int32);
             sp.Command.AddParameter("AppUserID",AppUserID,DbType.Int32);
             sp.Command.AddParameter("Comment",Comment,DbType.AnsiString);
+            return sp;
+        }
+        public StoredProcedure InsertLiveBroadcastMessage(int LiveBroadcastID,int AppUserID,string Message){
+            StoredProcedure sp=new StoredProcedure("InsertLiveBroadcastMessage",this.Provider);
+            sp.Command.AddParameter("LiveBroadcastID",LiveBroadcastID,DbType.Int32);
+            sp.Command.AddParameter("AppUserID",AppUserID,DbType.Int32);
+            sp.Command.AddParameter("Message",Message,DbType.AnsiString);
             return sp;
         }
         public StoredProcedure InsertMBTrackingBroadcast(int AppUserID,DateTime UTCNow,string TrackingGPXWKT){

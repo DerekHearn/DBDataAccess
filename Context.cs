@@ -13,7 +13,6 @@ using SubSonic.Query;
 using SubSonic.Schema;
 using System.Data.Common;
 using System.Collections.Generic;
-using System.Configuration;
 
 namespace DBDataAccess
 {
@@ -36,9 +35,7 @@ namespace DBDataAccess
         public MeetballDB() 
         {
             if (DefaultDataProvider == null) {
-							
                 DataProvider = ProviderFactory.GetProvider("meetball");
-							
             }
             else {
                 DataProvider = DefaultDataProvider;

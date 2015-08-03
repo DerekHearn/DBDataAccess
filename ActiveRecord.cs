@@ -30,8 +30,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<TimeZone> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<TimeZone>(new DBDataAccess.MeetballDB());
         }
@@ -200,6 +198,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<TimeZone> Query(Expression<Func<TimeZone, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<TimeZone> Find(Expression<Func<TimeZone, bool>> expression) {
             
@@ -520,8 +524,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<SportsType> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<SportsType>(new DBDataAccess.MeetballDB());
         }
@@ -690,6 +692,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<SportsType> Query(Expression<Func<SportsType, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<SportsType> Find(Expression<Func<SportsType, bool>> expression) {
             
@@ -1065,8 +1073,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<NotificationAction> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<NotificationAction>(new DBDataAccess.MeetballDB());
         }
@@ -1235,6 +1241,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<NotificationAction> Query(Expression<Func<NotificationAction, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<NotificationAction> Find(Expression<Func<NotificationAction, bool>> expression) {
             
@@ -1517,8 +1529,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<ConvoXAppUser> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<ConvoXAppUser>(new DBDataAccess.MeetballDB());
         }
@@ -1687,6 +1697,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<ConvoXAppUser> Query(Expression<Func<ConvoXAppUser, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<ConvoXAppUser> Find(Expression<Func<ConvoXAppUser, bool>> expression) {
             
@@ -2019,8 +2035,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<SportsEventType> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<SportsEventType>(new DBDataAccess.MeetballDB());
         }
@@ -2189,6 +2203,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<SportsEventType> Query(Expression<Func<SportsEventType, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<SportsEventType> Find(Expression<Func<SportsEventType, bool>> expression) {
             
@@ -2528,8 +2548,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<Notification> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<Notification>(new DBDataAccess.MeetballDB());
         }
@@ -2698,6 +2716,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<Notification> Query(Expression<Func<Notification, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<Notification> Find(Expression<Func<Notification, bool>> expression) {
             
@@ -3149,8 +3173,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<AppUserActivity> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppUserActivity>(new DBDataAccess.MeetballDB());
         }
@@ -3319,6 +3341,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppUserActivity> Query(Expression<Func<AppUserActivity, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppUserActivity> Find(Expression<Func<AppUserActivity, bool>> expression) {
             
@@ -3677,8 +3705,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<PhoneAppUser> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<PhoneAppUser>(new DBDataAccess.MeetballDB());
         }
@@ -3847,6 +3873,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<PhoneAppUser> Query(Expression<Func<PhoneAppUser, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<PhoneAppUser> Find(Expression<Func<PhoneAppUser, bool>> expression) {
             
@@ -4205,8 +4237,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<GPXType> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<GPXType>(new DBDataAccess.MeetballDB());
         }
@@ -4375,6 +4405,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<GPXType> Query(Expression<Func<GPXType, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<GPXType> Find(Expression<Func<GPXType, bool>> expression) {
             
@@ -4786,8 +4822,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<Usage> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<Usage>(new DBDataAccess.MeetballDB());
         }
@@ -4956,6 +4990,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<Usage> Query(Expression<Func<Usage, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<Usage> Find(Expression<Func<Usage, bool>> expression) {
             
@@ -5238,8 +5278,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<FriendStatus> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<FriendStatus>(new DBDataAccess.MeetballDB());
         }
@@ -5408,6 +5446,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<FriendStatus> Query(Expression<Func<FriendStatus, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<FriendStatus> Find(Expression<Func<FriendStatus, bool>> expression) {
             
@@ -5747,8 +5791,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<EventType> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<EventType>(new DBDataAccess.MeetballDB());
         }
@@ -5917,6 +5959,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<EventType> Query(Expression<Func<EventType, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<EventType> Find(Expression<Func<EventType, bool>> expression) {
             
@@ -6294,8 +6342,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<WebAssetCollection> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<WebAssetCollection>(new DBDataAccess.MeetballDB());
         }
@@ -6464,6 +6510,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<WebAssetCollection> Query(Expression<Func<WebAssetCollection, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<WebAssetCollection> Find(Expression<Func<WebAssetCollection, bool>> expression) {
             
@@ -6765,8 +6817,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<ContactImport> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<ContactImport>(new DBDataAccess.MeetballDB());
         }
@@ -6935,6 +6985,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<ContactImport> Query(Expression<Func<ContactImport, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<ContactImport> Find(Expression<Func<ContactImport, bool>> expression) {
             
@@ -7331,8 +7387,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<Division> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<Division>(new DBDataAccess.MeetballDB());
         }
@@ -7501,6 +7555,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<Division> Query(Expression<Func<Division, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<Division> Find(Expression<Func<Division, bool>> expression) {
             
@@ -7871,8 +7931,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<ncaaVenueImport> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<ncaaVenueImport>(new DBDataAccess.MeetballDB());
         }
@@ -8041,6 +8099,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<ncaaVenueImport> Query(Expression<Func<ncaaVenueImport, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<ncaaVenueImport> Find(Expression<Func<ncaaVenueImport, bool>> expression) {
             
@@ -8515,8 +8579,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<SportsTeam> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<SportsTeam>(new DBDataAccess.MeetballDB());
         }
@@ -8685,6 +8747,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<SportsTeam> Query(Expression<Func<SportsTeam, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<SportsTeam> Find(Expression<Func<SportsTeam, bool>> expression) {
             
@@ -9210,8 +9278,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<Sharing> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<Sharing>(new DBDataAccess.MeetballDB());
         }
@@ -9380,6 +9446,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<Sharing> Query(Expression<Func<Sharing, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<Sharing> Find(Expression<Func<Sharing, bool>> expression) {
             
@@ -9731,8 +9803,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<Event> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<Event>(new DBDataAccess.MeetballDB());
         }
@@ -9901,6 +9971,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<Event> Query(Expression<Func<Event, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<Event> Find(Expression<Func<Event, bool>> expression) {
             
@@ -10340,8 +10416,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MeetBallVariable> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MeetBallVariable>(new DBDataAccess.MeetballDB());
         }
@@ -10510,6 +10584,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MeetBallVariable> Query(Expression<Func<MeetBallVariable, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MeetBallVariable> Find(Expression<Func<MeetBallVariable, bool>> expression) {
             
@@ -10799,8 +10879,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<FriendGroup> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<FriendGroup>(new DBDataAccess.MeetballDB());
         }
@@ -10969,6 +11047,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<FriendGroup> Query(Expression<Func<FriendGroup, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<FriendGroup> Find(Expression<Func<FriendGroup, bool>> expression) {
             
@@ -11377,8 +11461,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<Conference> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<Conference>(new DBDataAccess.MeetballDB());
         }
@@ -11547,6 +11629,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<Conference> Query(Expression<Func<Conference, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<Conference> Find(Expression<Func<Conference, bool>> expression) {
             
@@ -11936,8 +12024,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<FriendGroupXFriendAppUser> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<FriendGroupXFriendAppUser>(new DBDataAccess.MeetballDB());
         }
@@ -12106,6 +12192,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<FriendGroupXFriendAppUser> Query(Expression<Func<FriendGroupXFriendAppUser, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<FriendGroupXFriendAppUser> Find(Expression<Func<FriendGroupXFriendAppUser, bool>> expression) {
             
@@ -12400,8 +12492,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<LocationSharing> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<LocationSharing>(new DBDataAccess.MeetballDB());
         }
@@ -12570,6 +12660,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<LocationSharing> Query(Expression<Func<LocationSharing, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<LocationSharing> Find(Expression<Func<LocationSharing, bool>> expression) {
             
@@ -12921,8 +13017,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<AppUser> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppUser>(new DBDataAccess.MeetballDB());
         }
@@ -13091,6 +13185,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppUser> Query(Expression<Func<AppUser, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppUser> Find(Expression<Func<AppUser, bool>> expression) {
             
@@ -13363,6 +13463,18 @@ namespace DBDataAccess
             }
         }
 
+        public IQueryable<ContestEntry> ContestEntries
+        {
+            get
+            {
+                
+                  var repo=DBDataAccess.ContestEntry.GetRepo();
+                  return from items in repo.GetAll()
+                       where items.AppUserID == _AppUserID
+                       select items;
+            }
+        }
+
         public IQueryable<AppUserPush> AppUserPushes
         {
             get
@@ -13411,7 +13523,7 @@ namespace DBDataAccess
             }
         }
 
-        public IQueryable<EmailLog> EmailLogs19
+        public IQueryable<EmailLog> EmailLogs20
         {
             get
             {
@@ -13447,7 +13559,7 @@ namespace DBDataAccess
             }
         }
 
-        public IQueryable<MeetballResponse> MeetballResponses22
+        public IQueryable<MeetballResponse> MeetballResponses23
         {
             get
             {
@@ -13519,7 +13631,7 @@ namespace DBDataAccess
             }
         }
 
-        public IQueryable<AppUserXFriendAppUser> AppUserXFriendAppUsers28
+        public IQueryable<AppUserXFriendAppUser> AppUserXFriendAppUsers29
         {
             get
             {
@@ -13543,7 +13655,7 @@ namespace DBDataAccess
             }
         }
 
-        public IQueryable<AppUserActivityLog> AppUserActivityLogs30
+        public IQueryable<AppUserActivityLog> AppUserActivityLogs31
         {
             get
             {
@@ -13567,7 +13679,7 @@ namespace DBDataAccess
             }
         }
 
-        public IQueryable<MeetballComment> MeetballComments32
+        public IQueryable<MeetballComment> MeetballComments33
         {
             get
             {
@@ -13591,7 +13703,7 @@ namespace DBDataAccess
             }
         }
 
-        public IQueryable<AppUserMerge> AppUserMerges34
+        public IQueryable<AppUserMerge> AppUserMerges35
         {
             get
             {
@@ -14216,8 +14328,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<TwitterAppUser> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<TwitterAppUser>(new DBDataAccess.MeetballDB());
         }
@@ -14386,6 +14496,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<TwitterAppUser> Query(Expression<Func<TwitterAppUser, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<TwitterAppUser> Find(Expression<Func<TwitterAppUser, bool>> expression) {
             
@@ -14934,8 +15050,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<Venue> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<Venue>(new DBDataAccess.MeetballDB());
         }
@@ -15104,6 +15218,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<Venue> Query(Expression<Func<Venue, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<Venue> Find(Expression<Func<Venue, bool>> expression) {
             
@@ -15693,8 +15813,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<Response> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<Response>(new DBDataAccess.MeetballDB());
         }
@@ -15863,6 +15981,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<Response> Query(Expression<Func<Response, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<Response> Find(Expression<Func<Response, bool>> expression) {
             
@@ -16214,8 +16338,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<VenueLot> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<VenueLot>(new DBDataAccess.MeetballDB());
         }
@@ -16384,6 +16506,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<VenueLot> Query(Expression<Func<VenueLot, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<VenueLot> Find(Expression<Func<VenueLot, bool>> expression) {
             
@@ -16773,8 +16901,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<AppUserDefault> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppUserDefault>(new DBDataAccess.MeetballDB());
         }
@@ -16943,6 +17069,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppUserDefault> Query(Expression<Func<AppUserDefault, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppUserDefault> Find(Expression<Func<AppUserDefault, bool>> expression) {
             
@@ -17439,8 +17571,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<VenueXAppUserStatus> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<VenueXAppUserStatus>(new DBDataAccess.MeetballDB());
         }
@@ -17609,6 +17739,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<VenueXAppUserStatus> Query(Expression<Func<VenueXAppUserStatus, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<VenueXAppUserStatus> Find(Expression<Func<VenueXAppUserStatus, bool>> expression) {
             
@@ -17929,8 +18065,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<SportsEvent> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<SportsEvent>(new DBDataAccess.MeetballDB());
         }
@@ -18099,6 +18233,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<SportsEvent> Query(Expression<Func<SportsEvent, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<SportsEvent> Find(Expression<Func<SportsEvent, bool>> expression) {
             
@@ -18562,8 +18702,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<VenueXAppUser> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<VenueXAppUser>(new DBDataAccess.MeetballDB());
         }
@@ -18732,6 +18870,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<VenueXAppUser> Query(Expression<Func<VenueXAppUser, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<VenueXAppUser> Find(Expression<Func<VenueXAppUser, bool>> expression) {
             
@@ -19057,8 +19201,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<SportsTeamXVenue> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<SportsTeamXVenue>(new DBDataAccess.MeetballDB());
         }
@@ -19227,6 +19369,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<SportsTeamXVenue> Query(Expression<Func<SportsTeamXVenue, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<SportsTeamXVenue> Find(Expression<Func<SportsTeamXVenue, bool>> expression) {
             
@@ -19540,8 +19688,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<WebAssetCategory> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<WebAssetCategory>(new DBDataAccess.MeetballDB());
         }
@@ -19710,6 +19856,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<WebAssetCategory> Query(Expression<Func<WebAssetCategory, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<WebAssetCategory> Find(Expression<Func<WebAssetCategory, bool>> expression) {
             
@@ -20068,8 +20220,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<url_base> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<url_base>(new DBDataAccess.MeetballDB());
         }
@@ -20238,6 +20388,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<url_base> Query(Expression<Func<url_base, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<url_base> Find(Expression<Func<url_base, bool>> expression) {
             
@@ -20527,8 +20683,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<AppUserXSportsTeam> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppUserXSportsTeam>(new DBDataAccess.MeetballDB());
         }
@@ -20697,6 +20851,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppUserXSportsTeam> Query(Expression<Func<AppUserXSportsTeam, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppUserXSportsTeam> Find(Expression<Func<AppUserXSportsTeam, bool>> expression) {
             
@@ -20991,8 +21151,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<Meetball> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<Meetball>(new DBDataAccess.MeetballDB());
         }
@@ -21161,6 +21319,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<Meetball> Query(Expression<Func<Meetball, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<Meetball> Find(Expression<Func<Meetball, bool>> expression) {
             
@@ -22250,8 +22414,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<AppUserXFriendAppUser> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppUserXFriendAppUser>(new DBDataAccess.MeetballDB());
         }
@@ -22420,6 +22582,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppUserXFriendAppUser> Query(Expression<Func<AppUserXFriendAppUser, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppUserXFriendAppUser> Find(Expression<Func<AppUserXFriendAppUser, bool>> expression) {
             
@@ -22845,8 +23013,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<EventXHashtag> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<EventXHashtag>(new DBDataAccess.MeetballDB());
         }
@@ -23015,6 +23181,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<EventXHashtag> Query(Expression<Func<EventXHashtag, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<EventXHashtag> Find(Expression<Func<EventXHashtag, bool>> expression) {
             
@@ -23297,8 +23469,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<AppUserOffPlatform> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppUserOffPlatform>(new DBDataAccess.MeetballDB());
         }
@@ -23467,6 +23637,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppUserOffPlatform> Query(Expression<Func<AppUserOffPlatform, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppUserOffPlatform> Find(Expression<Func<AppUserOffPlatform, bool>> expression) {
             
@@ -23863,8 +24039,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<AppUserActivityLog> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppUserActivityLog>(new DBDataAccess.MeetballDB());
         }
@@ -24033,6 +24207,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppUserActivityLog> Query(Expression<Func<AppUserActivityLog, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppUserActivityLog> Find(Expression<Func<AppUserActivityLog, bool>> expression) {
             
@@ -24484,8 +24664,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<WebAssetSetting> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<WebAssetSetting>(new DBDataAccess.MeetballDB());
         }
@@ -24654,6 +24832,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<WebAssetSetting> Query(Expression<Func<WebAssetSetting, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<WebAssetSetting> Find(Expression<Func<WebAssetSetting, bool>> expression) {
             
@@ -25088,8 +25272,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MeetballXHashtag> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MeetballXHashtag>(new DBDataAccess.MeetballDB());
         }
@@ -25258,6 +25440,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MeetballXHashtag> Query(Expression<Func<MeetballXHashtag, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MeetballXHashtag> Find(Expression<Func<MeetballXHashtag, bool>> expression) {
             
@@ -25535,8 +25723,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MeetballOwner> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MeetballOwner>(new DBDataAccess.MeetballDB());
         }
@@ -25705,6 +25891,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MeetballOwner> Query(Expression<Func<MeetballOwner, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MeetballOwner> Find(Expression<Func<MeetballOwner, bool>> expression) {
             
@@ -25999,8 +26191,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<AppUserXPhone> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppUserXPhone>(new DBDataAccess.MeetballDB());
         }
@@ -26169,6 +26359,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppUserXPhone> Query(Expression<Func<AppUserXPhone, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppUserXPhone> Find(Expression<Func<AppUserXPhone, bool>> expression) {
             
@@ -26470,8 +26666,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MeetballComment> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MeetballComment>(new DBDataAccess.MeetballDB());
         }
@@ -26640,6 +26834,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MeetballComment> Query(Expression<Func<MeetballComment, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MeetballComment> Find(Expression<Func<MeetballComment, bool>> expression) {
             
@@ -27079,8 +27279,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<EmailTemplate> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<EmailTemplate>(new DBDataAccess.MeetballDB());
         }
@@ -27249,6 +27447,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<EmailTemplate> Query(Expression<Func<EmailTemplate, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<EmailTemplate> Find(Expression<Func<EmailTemplate, bool>> expression) {
             
@@ -27713,6 +27917,500 @@ namespace DBDataAccess
     
     
     /// <summary>
+    /// A class which represents the ContestEntry table in the Meetball Database.
+    /// </summary>
+    public partial class ContestEntry: IActiveRecord
+    {
+    
+        #region Built-in testing
+        static TestRepository<ContestEntry> _testRepo;
+        
+        static void SetTestRepo(){
+            _testRepo = _testRepo ?? new TestRepository<ContestEntry>(new DBDataAccess.MeetballDB());
+        }
+        public static void ResetTestRepo(){
+            _testRepo = null;
+            SetTestRepo();
+        }
+        public static void Setup(List<ContestEntry> testlist){
+            SetTestRepo();
+            foreach (var item in testlist)
+            {
+                _testRepo._items.Add(item);
+            }
+        }
+        public static void Setup(ContestEntry item) {
+            SetTestRepo();
+            _testRepo._items.Add(item);
+        }
+        public static void Setup(int testItems) {
+            SetTestRepo();
+            for(int i=0;i<testItems;i++){
+                ContestEntry item=new ContestEntry();
+                _testRepo._items.Add(item);
+            }
+        }
+        
+        public bool TestMode = false;
+
+
+        #endregion
+
+        IRepository<ContestEntry> _repo;
+        ITable tbl;
+        bool _isNew;
+        public bool IsNew(){
+            return _isNew;
+        }
+        
+        public void SetIsLoaded(bool isLoaded){
+            _isLoaded=isLoaded;
+            if(isLoaded)
+                OnLoaded();
+        }
+        
+        public void SetIsNew(bool isNew){
+            _isNew=isNew;
+        }
+        bool _isLoaded;
+        public bool IsLoaded(){
+            return _isLoaded;
+        }
+                
+        List<IColumn> _dirtyColumns;
+        public bool IsDirty(){
+            return _dirtyColumns.Count>0;
+        }
+        
+        public List<IColumn> GetDirtyColumns (){
+            return _dirtyColumns;
+        }
+
+        DBDataAccess.MeetballDB _db;
+        public ContestEntry(string connectionString, string providerName) {
+
+            _db=new DBDataAccess.MeetballDB(connectionString, providerName);
+            Init();            
+         }
+        void Init(){
+            TestMode=this._db.DataProvider.ConnectionString.Equals("test", StringComparison.InvariantCultureIgnoreCase);
+            _dirtyColumns=new List<IColumn>();
+            if(TestMode){
+                ContestEntry.SetTestRepo();
+                _repo=_testRepo;
+            }else{
+                _repo = new SubSonicRepository<ContestEntry>(_db);
+            }
+            tbl=_repo.GetTable();
+            SetIsNew(true);
+            OnCreated();       
+
+        }
+        
+        public ContestEntry(){
+             _db=new DBDataAccess.MeetballDB();
+            Init();            
+        }
+        
+       
+        partial void OnCreated();
+            
+        partial void OnLoaded();
+        
+        partial void OnSaved();
+        
+        partial void OnChanged();
+        
+        public IList<IColumn> Columns{
+            get{
+                return tbl.Columns;
+            }
+        }
+
+        public ContestEntry(Expression<Func<ContestEntry, bool>> expression):this() {
+
+            SetIsLoaded(_repo.Load(this,expression));
+        }
+        
+       
+        
+        internal static IRepository<ContestEntry> GetRepo(string connectionString, string providerName){
+            DBDataAccess.MeetballDB db;
+            if(String.IsNullOrEmpty(connectionString)){
+                db=new DBDataAccess.MeetballDB();
+            }else{
+                db=new DBDataAccess.MeetballDB(connectionString, providerName);
+            }
+            IRepository<ContestEntry> _repo;
+            
+            if(db.TestMode){
+                ContestEntry.SetTestRepo();
+                _repo=_testRepo;
+            }else{
+                _repo = new SubSonicRepository<ContestEntry>(db);
+            }
+            return _repo;        
+        }       
+        
+        internal static IRepository<ContestEntry> GetRepo(){
+            return GetRepo("","");
+        }
+        
+        public static ContestEntry SingleOrDefault(Expression<Func<ContestEntry, bool>> expression) {
+
+            var repo = GetRepo();
+            var results=repo.Find(expression);
+            ContestEntry single=null;
+            if(results.Count() > 0){
+                single=results.ToList()[0];
+                single.OnLoaded();
+                single.SetIsLoaded(true);
+                single.SetIsNew(false);
+            }
+
+            return single;
+        }      
+        
+        public static ContestEntry SingleOrDefault(Expression<Func<ContestEntry, bool>> expression,string connectionString, string providerName) {
+            var repo = GetRepo(connectionString,providerName);
+            var results=repo.Find(expression);
+            ContestEntry single=null;
+            if(results.Count() > 0){
+                single=results.ToList()[0];
+            }
+
+            return single;
+
+
+        }
+        
+        
+        public static bool Exists(Expression<Func<ContestEntry, bool>> expression,string connectionString, string providerName) {
+           
+            return All(connectionString,providerName).Any(expression);
+        }        
+        public static bool Exists(Expression<Func<ContestEntry, bool>> expression) {
+           
+            return All().Any(expression);
+        }        
+
+        public static IQueryable<ContestEntry> Query(Expression<Func<ContestEntry, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
+
+        public static IList<ContestEntry> Find(Expression<Func<ContestEntry, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression).ToList();
+        }
+        
+        public static IList<ContestEntry> Find(Expression<Func<ContestEntry, bool>> expression,string connectionString, string providerName) {
+
+            var repo = GetRepo(connectionString,providerName);
+            return repo.Find(expression).ToList();
+
+        }
+        public static IQueryable<ContestEntry> All(string connectionString, string providerName) {
+            return GetRepo(connectionString,providerName).GetAll();
+        }
+        public static IQueryable<ContestEntry> All() {
+            return GetRepo().GetAll();
+        }
+        
+        public static PagedList<ContestEntry> GetPaged(string sortBy, int pageIndex, int pageSize,string connectionString, string providerName) {
+            return GetRepo(connectionString,providerName).GetPaged(sortBy, pageIndex, pageSize);
+        }
+      
+        public static PagedList<ContestEntry> GetPaged(string sortBy, int pageIndex, int pageSize) {
+            return GetRepo().GetPaged(sortBy, pageIndex, pageSize);
+        }
+
+        public static PagedList<ContestEntry> GetPaged(int pageIndex, int pageSize,string connectionString, string providerName) {
+            return GetRepo(connectionString,providerName).GetPaged(pageIndex, pageSize);
+            
+        }
+
+
+        public static PagedList<ContestEntry> GetPaged(int pageIndex, int pageSize) {
+            return GetRepo().GetPaged(pageIndex, pageSize);
+            
+        }
+
+        public string KeyName()
+        {
+            return "ContestEntryID";
+        }
+
+        public object KeyValue()
+        {
+            return this.ContestEntryID;
+        }
+        
+        public void SetKeyValue(object value) {
+            if (value != null && value!=DBNull.Value) {
+                var settable = value.ChangeTypeTo<int>();
+                this.GetType().GetProperty(this.KeyName()).SetValue(this, settable, null);
+            }
+        }
+        
+        public override string ToString(){
+                            return this.CampaignID.ToString();
+                    }
+
+        public override bool Equals(object obj){
+            if(obj.GetType()==typeof(ContestEntry)){
+                ContestEntry compare=(ContestEntry)obj;
+                return compare.KeyValue()==this.KeyValue();
+            }else{
+                return base.Equals(obj);
+            }
+        }
+
+        
+        public override int GetHashCode() {
+            return this.ContestEntryID;
+        }
+        
+        public string DescriptorValue()
+        {
+                            return this.CampaignID.ToString();
+                    }
+
+        public string DescriptorColumn() {
+            return "CampaignID";
+        }
+        public static string GetKeyColumn()
+        {
+            return "ContestEntryID";
+        }        
+        public static string GetDescriptorColumn()
+        {
+            return "CampaignID";
+        }
+        
+        #region ' Foreign Keys '
+        public IQueryable<AppUser> AppUsers
+        {
+            get
+            {
+                
+                  var repo=DBDataAccess.AppUser.GetRepo();
+                  return from items in repo.GetAll()
+                       where items.AppUserID == _AppUserID
+                       select items;
+            }
+        }
+
+        #endregion
+        
+
+        int _ContestEntryID;
+        public int ContestEntryID
+        {
+            get { return _ContestEntryID; }
+            set
+            {
+                if(_ContestEntryID!=value){
+                    _ContestEntryID=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="ContestEntryID");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+        int _CampaignID;
+        public int CampaignID
+        {
+            get { return _CampaignID; }
+            set
+            {
+                if(_CampaignID!=value){
+                    _CampaignID=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="CampaignID");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+        int _AppUserID;
+        public int AppUserID
+        {
+            get { return _AppUserID; }
+            set
+            {
+                if(_AppUserID!=value){
+                    _AppUserID=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="AppUserID");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+        DateTime _EntryDate;
+        public DateTime EntryDate
+        {
+            get { return _EntryDate; }
+            set
+            {
+                if(_EntryDate!=value){
+                    _EntryDate=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="EntryDate");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+
+
+        public DbCommand GetUpdateCommand() {
+            if(TestMode)
+                return _db.DataProvider.CreateCommand();
+            else
+                return this.ToUpdateQuery(_db.Provider).GetCommand().ToDbCommand();
+            
+        }
+        public DbCommand GetInsertCommand() {
+ 
+            if(TestMode)
+                return _db.DataProvider.CreateCommand();
+            else
+                return this.ToInsertQuery(_db.Provider).GetCommand().ToDbCommand();
+        }
+        
+        public DbCommand GetDeleteCommand() {
+            if(TestMode)
+                return _db.DataProvider.CreateCommand();
+            else
+                return this.ToDeleteQuery(_db.Provider).GetCommand().ToDbCommand();
+        }
+       
+        
+        public void Update(){
+            Update(_db.DataProvider);
+        }
+        
+        public void Update(IDataProvider provider){
+        
+            
+            if(this._dirtyColumns.Count>0){
+                _repo.Update(this,provider);
+                _dirtyColumns.Clear();    
+            }
+            OnSaved();
+       }
+ 
+        public void Add(){
+            Add(_db.DataProvider);
+        }
+        
+        
+       
+        public void Add(IDataProvider provider){
+
+            
+            var key=KeyValue();
+            if(key==null){
+                var newKey=_repo.Add(this,provider);
+                this.SetKeyValue(newKey);
+            }else{
+                _repo.Add(this,provider);
+            }
+            SetIsNew(false);
+            OnSaved();
+        }
+        
+                
+        
+        public void Save() {
+            Save(_db.DataProvider);
+        }      
+        public void Save(IDataProvider provider) {
+            
+           
+            if (_isNew) {
+                Add(provider);
+                
+            } else {
+                Update(provider);
+            }
+            
+        }
+
+        
+
+        public void Delete(IDataProvider provider) {
+                   
+                 
+            _repo.Delete(KeyValue());
+            
+                    }
+
+
+        public void Delete() {
+            Delete(_db.DataProvider);
+        }
+
+
+        public static void Delete(Expression<Func<ContestEntry, bool>> expression) {
+            var repo = GetRepo();
+            
+       
+            
+            repo.DeleteMany(expression);
+            
+        }
+
+        
+
+        public void Load(IDataReader rdr) {
+            Load(rdr, true);
+        }
+        public void Load(IDataReader rdr, bool closeReader) {
+            if (rdr.Read()) {
+
+                try {
+                    rdr.Load(this);
+                    SetIsNew(false);
+                    SetIsLoaded(true);
+                } catch {
+                    SetIsLoaded(false);
+                    throw;
+                }
+            }else{
+                SetIsLoaded(false);
+            }
+
+            if (closeReader)
+                rdr.Dispose();
+        }
+        
+
+    } 
+    
+    
+    /// <summary>
     /// A class which represents the AppUserPush table in the Meetball Database.
     /// </summary>
     public partial class AppUserPush: IActiveRecord
@@ -27720,8 +28418,6 @@ namespace DBDataAccess
     
         #region Built-in testing
         static TestRepository<AppUserPush> _testRepo;
-        
-
         
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppUserPush>(new DBDataAccess.MeetballDB());
@@ -27891,6 +28587,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppUserPush> Query(Expression<Func<AppUserPush, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppUserPush> Find(Expression<Func<AppUserPush, bool>> expression) {
             
@@ -28318,8 +29020,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<url_short> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<url_short>(new DBDataAccess.MeetballDB());
         }
@@ -28488,6 +29188,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<url_short> Query(Expression<Func<url_short, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<url_short> Find(Expression<Func<url_short, bool>> expression) {
             
@@ -28815,8 +29521,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<AppUserPushSession> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppUserPushSession>(new DBDataAccess.MeetballDB());
         }
@@ -28985,6 +29689,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppUserPushSession> Query(Expression<Func<AppUserPushSession, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppUserPushSession> Find(Expression<Func<AppUserPushSession, bool>> expression) {
             
@@ -29305,8 +30015,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<EmailLog> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<EmailLog>(new DBDataAccess.MeetballDB());
         }
@@ -29475,6 +30183,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<EmailLog> Query(Expression<Func<EmailLog, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<EmailLog> Find(Expression<Func<EmailLog, bool>> expression) {
             
@@ -30002,8 +30716,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MeetballResponseLog> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MeetballResponseLog>(new DBDataAccess.MeetballDB());
         }
@@ -30172,6 +30884,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MeetballResponseLog> Query(Expression<Func<MeetballResponseLog, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MeetballResponseLog> Find(Expression<Func<MeetballResponseLog, bool>> expression) {
             
@@ -30504,8 +31222,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MessageType> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MessageType>(new DBDataAccess.MeetballDB());
         }
@@ -30674,6 +31390,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MessageType> Query(Expression<Func<MessageType, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MessageType> Find(Expression<Func<MessageType, bool>> expression) {
             
@@ -31013,8 +31735,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<Platform> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<Platform>(new DBDataAccess.MeetballDB());
         }
@@ -31183,6 +31903,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<Platform> Query(Expression<Func<Platform, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<Platform> Find(Expression<Func<Platform, bool>> expression) {
             
@@ -31541,8 +32267,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<AppUserLog> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppUserLog>(new DBDataAccess.MeetballDB());
         }
@@ -31711,6 +32435,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppUserLog> Query(Expression<Func<AppUserLog, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppUserLog> Find(Expression<Func<AppUserLog, bool>> expression) {
             
@@ -32012,8 +32742,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<WebAsset> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<WebAsset>(new DBDataAccess.MeetballDB());
         }
@@ -32182,6 +32910,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<WebAsset> Query(Expression<Func<WebAsset, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<WebAsset> Find(Expression<Func<WebAsset, bool>> expression) {
             
@@ -32647,8 +33381,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<LoginType> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<LoginType>(new DBDataAccess.MeetballDB());
         }
@@ -32817,6 +33549,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<LoginType> Query(Expression<Func<LoginType, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<LoginType> Find(Expression<Func<LoginType, bool>> expression) {
             
@@ -33156,8 +33894,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MeetballLog> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MeetballLog>(new DBDataAccess.MeetballDB());
         }
@@ -33326,6 +34062,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MeetballLog> Query(Expression<Func<MeetballLog, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MeetballLog> Find(Expression<Func<MeetballLog, bool>> expression) {
             
@@ -33746,8 +34488,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MeetballTracking> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MeetballTracking>(new DBDataAccess.MeetballDB());
         }
@@ -33916,6 +34656,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MeetballTracking> Query(Expression<Func<MeetballTracking, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MeetballTracking> Find(Expression<Func<MeetballTracking, bool>> expression) {
             
@@ -34398,8 +35144,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MeetballResponse> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MeetballResponse>(new DBDataAccess.MeetballDB());
         }
@@ -34568,6 +35312,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MeetballResponse> Query(Expression<Func<MeetballResponse, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MeetballResponse> Find(Expression<Func<MeetballResponse, bool>> expression) {
             
@@ -35150,8 +35900,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<ncaa_import> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<ncaa_import>(new DBDataAccess.MeetballDB());
         }
@@ -35320,6 +36068,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<ncaa_import> Query(Expression<Func<ncaa_import, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<ncaa_import> Find(Expression<Func<ncaa_import, bool>> expression) {
             
@@ -35699,8 +36453,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<FBAppUser> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<FBAppUser>(new DBDataAccess.MeetballDB());
         }
@@ -35869,6 +36621,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<FBAppUser> Query(Expression<Func<FBAppUser, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<FBAppUser> Find(Expression<Func<FBAppUser, bool>> expression) {
             
@@ -36360,8 +37118,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<AppSession> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppSession>(new DBDataAccess.MeetballDB());
         }
@@ -36530,6 +37286,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppSession> Query(Expression<Func<AppSession, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppSession> Find(Expression<Func<AppSession, bool>> expression) {
             
@@ -36938,8 +37700,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MethodLog> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MethodLog>(new DBDataAccess.MeetballDB());
         }
@@ -37108,6 +37868,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MethodLog> Query(Expression<Func<MethodLog, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MethodLog> Find(Expression<Func<MethodLog, bool>> expression) {
             
@@ -37580,8 +38346,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<Broadcast> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<Broadcast>(new DBDataAccess.MeetballDB());
         }
@@ -37750,6 +38514,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<Broadcast> Query(Expression<Func<Broadcast, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<Broadcast> Find(Expression<Func<Broadcast, bool>> expression) {
             
@@ -38094,8 +38864,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MeetBallXBroadcast> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MeetBallXBroadcast>(new DBDataAccess.MeetballDB());
         }
@@ -38264,6 +39032,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MeetBallXBroadcast> Query(Expression<Func<MeetBallXBroadcast, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MeetBallXBroadcast> Find(Expression<Func<MeetBallXBroadcast, bool>> expression) {
             
@@ -38558,8 +39332,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MBXBroadcastTemp> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MBXBroadcastTemp>(new DBDataAccess.MeetballDB());
         }
@@ -38728,6 +39500,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MBXBroadcastTemp> Query(Expression<Func<MBXBroadcastTemp, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MBXBroadcastTemp> Find(Expression<Func<MBXBroadcastTemp, bool>> expression) {
             
@@ -38998,8 +39776,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<AppUserXNotPossibleFriendAppUser> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppUserXNotPossibleFriendAppUser>(new DBDataAccess.MeetballDB());
         }
@@ -39168,6 +39944,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppUserXNotPossibleFriendAppUser> Query(Expression<Func<AppUserXNotPossibleFriendAppUser, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppUserXNotPossibleFriendAppUser> Find(Expression<Func<AppUserXNotPossibleFriendAppUser, bool>> expression) {
             
@@ -39462,8 +40244,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<AppUserMerge> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppUserMerge>(new DBDataAccess.MeetballDB());
         }
@@ -39632,6 +40412,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppUserMerge> Query(Expression<Func<AppUserMerge, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppUserMerge> Find(Expression<Func<AppUserMerge, bool>> expression) {
             
@@ -39964,8 +40750,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<EmailAppUser> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<EmailAppUser>(new DBDataAccess.MeetballDB());
         }
@@ -40134,6 +40918,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<EmailAppUser> Query(Expression<Func<EmailAppUser, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<EmailAppUser> Find(Expression<Func<EmailAppUser, bool>> expression) {
             
@@ -40568,8 +41358,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MethodLogException> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MethodLogException>(new DBDataAccess.MeetballDB());
         }
@@ -40738,6 +41526,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MethodLogException> Query(Expression<Func<MethodLogException, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MethodLogException> Find(Expression<Func<MethodLogException, bool>> expression) {
             
@@ -41122,8 +41916,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<AppUserPlatform> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppUserPlatform>(new DBDataAccess.MeetballDB());
         }
@@ -41292,6 +42084,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppUserPlatform> Query(Expression<Func<AppUserPlatform, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppUserPlatform> Find(Expression<Func<AppUserPlatform, bool>> expression) {
             
@@ -41752,8 +42550,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MethodLogMBException> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MethodLogMBException>(new DBDataAccess.MeetballDB());
         }
@@ -41922,6 +42718,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MethodLogMBException> Query(Expression<Func<MethodLogMBException, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MethodLogMBException> Find(Expression<Func<MethodLogMBException, bool>> expression) {
             
@@ -42268,8 +43070,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MeetballTrackingSession> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MeetballTrackingSession>(new DBDataAccess.MeetballDB());
         }
@@ -42438,6 +43238,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MeetballTrackingSession> Query(Expression<Func<MeetballTrackingSession, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MeetballTrackingSession> Find(Expression<Func<MeetballTrackingSession, bool>> expression) {
             
@@ -42810,8 +43616,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<ApiKey> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<ApiKey>(new DBDataAccess.MeetballDB());
         }
@@ -42980,6 +43784,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<ApiKey> Query(Expression<Func<ApiKey, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<ApiKey> Find(Expression<Func<ApiKey, bool>> expression) {
             
@@ -43307,8 +44117,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MBException> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MBException>(new DBDataAccess.MeetballDB());
         }
@@ -43477,6 +44285,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MBException> Query(Expression<Func<MBException, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MBException> Find(Expression<Func<MBException, bool>> expression) {
             
@@ -43842,8 +44656,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<AppDeveloper> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppDeveloper>(new DBDataAccess.MeetballDB());
         }
@@ -44012,6 +44824,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppDeveloper> Query(Expression<Func<AppDeveloper, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppDeveloper> Find(Expression<Func<AppDeveloper, bool>> expression) {
             
@@ -44294,8 +45112,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MeetballAction> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MeetballAction>(new DBDataAccess.MeetballDB());
         }
@@ -44464,6 +45280,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MeetballAction> Query(Expression<Func<MeetballAction, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MeetballAction> Find(Expression<Func<MeetballAction, bool>> expression) {
             
@@ -44803,8 +45625,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<Convo> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<Convo>(new DBDataAccess.MeetballDB());
         }
@@ -44973,6 +45793,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<Convo> Query(Expression<Func<Convo, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<Convo> Find(Expression<Func<Convo, bool>> expression) {
             
@@ -45322,8 +46148,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<SubvenueType> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<SubvenueType>(new DBDataAccess.MeetballDB());
         }
@@ -45492,6 +46316,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<SubvenueType> Query(Expression<Func<SubvenueType, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<SubvenueType> Find(Expression<Func<SubvenueType, bool>> expression) {
             
@@ -45850,8 +46680,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<Message> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<Message>(new DBDataAccess.MeetballDB());
         }
@@ -46020,6 +46848,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<Message> Query(Expression<Func<Message, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<Message> Find(Expression<Func<Message, bool>> expression) {
             
@@ -46371,8 +47205,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<Subvenue> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<Subvenue>(new DBDataAccess.MeetballDB());
         }
@@ -46541,6 +47373,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<Subvenue> Query(Expression<Func<Subvenue, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<Subvenue> Find(Expression<Func<Subvenue, bool>> expression) {
             
@@ -46930,8 +47768,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<AppUserLoginLog> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<AppUserLoginLog>(new DBDataAccess.MeetballDB());
         }
@@ -47100,6 +47936,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<AppUserLoginLog> Query(Expression<Func<AppUserLoginLog, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<AppUserLoginLog> Find(Expression<Func<AppUserLoginLog, bool>> expression) {
             
@@ -47389,8 +48231,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<VenueType> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<VenueType>(new DBDataAccess.MeetballDB());
         }
@@ -47559,6 +48399,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<VenueType> Query(Expression<Func<VenueType, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<VenueType> Find(Expression<Func<VenueType, bool>> expression) {
             
@@ -47898,8 +48744,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<MessageMB> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<MessageMB>(new DBDataAccess.MeetballDB());
         }
@@ -48068,6 +48912,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<MessageMB> Query(Expression<Func<MessageMB, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<MessageMB> Find(Expression<Func<MessageMB, bool>> expression) {
             
@@ -48450,8 +49300,6 @@ namespace DBDataAccess
         #region Built-in testing
         static TestRepository<TVNetwork> _testRepo;
         
-
-        
         static void SetTestRepo(){
             _testRepo = _testRepo ?? new TestRepository<TVNetwork>(new DBDataAccess.MeetballDB());
         }
@@ -48620,6 +49468,12 @@ namespace DBDataAccess
            
             return All().Any(expression);
         }        
+
+        public static IQueryable<TVNetwork> Query(Expression<Func<TVNetwork, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression);
+        }
 
         public static IList<TVNetwork> Find(Expression<Func<TVNetwork, bool>> expression) {
             
